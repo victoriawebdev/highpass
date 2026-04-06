@@ -1,0 +1,778 @@
+@import 'variables';
+
+@media (max-width: 1300px) {
+  .section-subtitle {
+    max-width: 510px;
+  }
+
+  .nav {
+    &__list {
+      column-gap: 56px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 96.875%;
+
+    &_footer {
+      grid-template-columns: 35.5% auto auto;
+    }
+  }
+
+  .logo {
+    max-width: 166px;
+  }
+
+  .nav {
+    flex-basis: 63%;
+
+    &__list {
+      gap: 15px 33px;
+    }
+  }
+
+  .hero {
+    padding-top: 34px;
+  }
+
+  .offer {
+    padding: 30px;
+    background-image: url('../img/raster/master-class-bg-1024.jpg');
+
+    &__title,
+    &__time {
+      font-size: 34px;
+    }
+
+    &__subtitle {
+      margin-bottom: 9px;
+    }
+  }
+
+  .wrapper {
+    &_works {
+      gap: 24px;
+    }
+
+    &_contacts {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    &_footer {
+      align-self: center;
+    }
+  }
+
+  .list {
+    &_works {
+      grid: {
+        template-rows: minmax(332px, 1fr) minmax(186px, 0.56fr);
+        auto-rows: minmax(186px, 0.56fr);
+      }
+    }
+
+    &_projects {
+      grid-template-columns: repeat(8, 1fr);
+      row-gap: 24px;
+    }
+
+    &__item {
+      &_project {
+        &:nth-child(3) {
+          grid-column: span 4;
+        }
+
+        &:nth-child(4) {
+          grid-column: span 5;
+        }
+
+        &:nth-child(5) {
+          grid-column: span 5;
+        }
+      }
+
+      &_view {
+        &_bg {
+          padding-top: 30px;
+        }
+      }
+
+      &_theme {
+        &_fuji {
+          background-image: url('../img/raster/fuji-1024.jpg');
+        }
+
+        &_oblivion {
+          order: 1;
+          background-image: url('../img/raster/oblivion-1024.jpg');
+        }
+      }
+    }
+
+    &__item_project:nth-child(-n + 3) &__desc {
+      -webkit-line-clamp: 2;
+    }
+
+    &__link {
+      &_view {
+        &_img {
+          gap: 17px;
+        }
+      }
+
+      &_theme {
+        &_landscape {
+          &::before {
+            background-image: url('../img/raster/landscape-1024.jpg');
+          }
+        }
+
+        &_portrait-man {
+          &::before {
+            background-image: url('../img/raster/portrait-man-1024.jpg');
+          }
+        }
+
+        &_object {
+          &::before {
+            background-image: url('../img/raster/object-1024.jpg');
+          }
+        }
+
+        &_retouch {
+          &::before {
+            background-image: url('../img/raster/retouch-1024.jpg');
+          }
+        }
+
+        &_portrait-woman {
+          &::before {
+            background-image: url('../img/raster/portrait-woman-1024.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  .form {
+    &_subscription {
+      &::before {
+        background-image: url('../img/raster/photo-1024.jpg');
+      }
+    }
+
+    &_contacts {
+      grid-column: span 3;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__input {
+      &_dark {
+        max-width: 342px;
+      }
+    }
+  }
+
+  .map {
+    grid-column: span 5;
+
+    &__overlay {
+      padding: 25px 30px 21px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .section-subtitle {
+    font-size: 22px;
+  }
+
+  .section-title {
+    &_contacts {
+      margin-bottom: 21px;
+    }
+  }
+
+  .header {
+    padding-bottom: 12px;
+    background-image: linear-gradient($color-main-darken 63.5%, $color-main-dark 63.5%);
+  }
+
+  .container {
+    max-width: 96.9%;
+
+    &_header {
+      flex-wrap: wrap;
+    }
+
+    &_footer {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  .nav {
+    flex-basis: 100%;
+    order: 1;
+
+    &__list {
+      justify-content: space-between;
+    }
+  }
+
+  .search-form {
+    transform: translateY(-225%);
+
+    &_show {
+      transform: translateY(-105%);
+    }
+  }
+
+  .offer {
+    background-image: url('../img/raster/master-class-bg-768.jpg');
+
+    &__title,
+    &__time {
+      line-height: 91%;
+    }
+
+    &__subtitle {
+      margin-bottom: 15px;
+    }
+
+    &__time {
+      margin-bottom: 22px;
+    }
+  }
+
+  .wrapper {
+    &_works {
+      gap: 17px;
+    }
+
+    &_contacts {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &_blockquote {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .list {
+    &_works {
+      grid: {
+        template-rows: minmax(228px, 1fr) minmax(133px, 0.58fr);
+        auto-rows: minmax(133px, 0.58fr);
+      }
+    }
+
+    &_projects {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 24px;
+    }
+
+    &__item {
+      &_theme {
+        &_fuji {
+          background-image: url('../img/raster/fuji-768.jpg');
+        }
+
+        &_oblivion {
+          background-image: url('../img/raster/oblivion-768.jpg');
+        }
+      }
+
+      &_project {
+        &:nth-child(3) {
+          grid-column: span 2;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          grid-column: span 6;
+        }
+      }
+    }
+
+    &__item_project:nth-child(-n + 3) &__desc {
+      -webkit-line-clamp: 3;
+    }
+
+    &__link {
+      &_view {
+        &_img {
+          gap: 11px;
+        }
+      }
+
+      &_theme {
+        &_object {
+          &::before {
+            background-image: url('../img/raster/object-768.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  .form {
+    &_subscription {
+      &::before {
+        background-image: url('../img/raster/photo-768.jpg');
+      }
+    }
+
+    &_contacts {
+      grid-column: span 4;
+    }
+  }
+
+  .map {
+    grid-column: span 6;
+    margin-top: 0;
+  }
+
+  .footer {
+    padding-bottom: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    &_about {
+      row-gap: 22px;
+    }
+  }
+
+  .section-title,
+  .section-subtitle {
+    font-size: 18px;
+  }
+
+  .section-text {
+    line-height: 179%;
+  }
+
+  .mark {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: {
+      top: 10px;
+      bottom: 8px;
+    }
+  }
+
+  .offer {
+    background-image: url('../img/raster/master-class-bg-320.jpg');
+
+    &__title,
+    &__time {
+      font-size: 24px;
+      line-height: 110%;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+
+  .list {
+    &_works {
+      grid: {
+        template-rows: minmax(186px, 1fr) minmax(105px, 0.56fr);
+        auto-rows: minmax(105px, 0.56fr);
+      }
+    }
+  }
+
+  .form {
+    &_subscription {
+      padding-top: 0;
+
+      &::before {
+        min-height: 278px;
+        background-image: url('../img/raster/photo-320.jpg');
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .map {
+    &__address {
+      max-width: 315px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .phone {
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 96.25%;
+
+    &_header {
+      position: static;
+    }
+
+    &_hero {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    &_about {
+      grid-template-columns: 1fr;
+    }
+
+    &_footer {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .section-offset {
+    padding: 30px 0 50px;
+  }
+
+  .section-title {
+    &_projects {
+      margin-bottom: 16px;
+    }
+
+    &_contacts {
+      margin-bottom: 13px;
+    }
+  }
+
+  .btn {
+    &_secondary {
+      padding: {
+        left: 18px;
+        right: 18px;
+      }
+    }
+  }
+
+  .btn-close {
+    &_nav {
+      display: block;
+    }
+  }
+
+  .wrapper {
+    &_contacts {
+      grid-template-columns: 1fr;
+      row-gap: 26px;
+    }
+
+    &_footer {
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  .list {
+    &_projects {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &_project {
+        &:nth-child(n + 1) {
+          grid-column: 1;
+        }
+      }
+
+      &_theme {
+        &_fuji {
+          background-image: url('../img/raster/fuji-320.jpg');
+        }
+
+        &_oblivion {
+          background-image: url('../img/raster/oblivion-320.jpg');
+        }
+      }
+
+      &_view {
+        &_bg {
+          gap: 15px;
+          padding-top: 196px;
+          min-height: 422px;
+        }
+      }
+    }
+
+    &__item_project:nth-child(3) &__desc {
+      -webkit-line-clamp: 2;
+    }
+
+    &__link {
+      &_theme {
+        &_landscape {
+          &::before {
+            background-image: url('../img/raster/landscape-320.jpg');
+          }
+        }
+
+        &_portrait-man {
+          &::before {
+            background-image: url('../img/raster/portrait-man-320.jpg');
+          }
+        }
+
+        &_object {
+          &::before {
+            background-image: url('../img/raster/object-320.jpg');
+          }
+        }
+
+        &_retouch {
+          &::before {
+            background-image: url('../img/raster/retouch-320.jpg');
+          }
+        }
+
+        &_portrait-woman {
+          &::before {
+            background-image: url('../img/raster/portrait-woman-320.jpg');
+          }
+        }
+      }
+    }
+
+    &__mark {
+      top: 5px;
+      right: 5px;
+      padding: 5px 15px 3px;
+    }
+
+    &__time {
+      margin-bottom: 7px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__desc {
+      line-height: 129%;
+    }
+  }
+
+  .stop-scroll {
+    overflow: hidden;
+  }
+
+  .header {
+    background-image: linear-gradient($color-main-darken 61%, $color-main-dark 61%);
+  }
+
+  .logo {
+    max-width: 112px;
+
+    &_footer {
+      margin-bottom: 0;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    &__wrapper {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 13px 18px 31px;
+      width: 100%;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      background-color: $color-main-darken;
+      visibility: hidden;
+      transition: transform $duration $timing-function, visibility $duration $timing-function;
+    }
+
+    &.active &__wrapper {
+      visibility: visible;
+      transform: translateX(100%);
+    }
+
+    &__list {
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: auto;
+    }
+
+    &__link {
+      padding: {
+        top: 5px;
+        bottom: 5px;
+      }
+
+      &_phone {
+        display: flex;
+      }
+    }
+  }
+
+  .search {
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .search-form {
+    top: 0;
+    right: 0;
+    width: 100%;
+
+    &_show {
+      transform: translateY(0);
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+
+  .offer {
+    &__mark {
+      top: 6px;
+      right: 6px;
+      padding: 5px 7px;
+    }
+
+    &__subtitle {
+      margin-bottom: 7px;
+    }
+
+    &__time {
+      margin-bottom: 14px;
+    }
+  }
+
+  .about {
+    padding-bottom: 60px;
+  }
+
+  .form {
+    &_subscription {
+      &::before {
+        margin-bottom: 29px;
+      }
+    }
+
+    &_contacts {
+      grid-column: 1;
+    }
+
+    &__title {
+      &_request {
+        margin-bottom: 11px;
+      }
+    }
+
+    &__desc {
+      line-height: 128%;
+    }
+
+    &__box {
+      &_request {
+        &:not(:last-child) {
+          margin-bottom: 21px;
+        }
+      }
+    }
+
+    &__input,
+    &__textarea {
+      padding: {
+        top: 13px;
+        bottom: 10px;
+      }
+    }
+  }
+
+  .projects {
+    padding: 50px 0 17px;
+  }
+
+  .contacts {
+    padding-top: 17px;
+  }
+
+  .map {
+    left: 50%;
+    right: 50%;
+    grid-column: 1;
+    margin: {
+      right: -50vw;
+      left: -50vw;
+    }
+    width: 100vw;
+    min-height: 472px;
+
+    &__overlay {
+      padding: 29px 19px 9px;
+    }
+
+    &__title {
+      margin-bottom: 13px;
+    }
+
+    &__location {
+      margin-bottom: 11px;
+      max-width: 269px;
+      line-height: 128%;
+    }
+  }
+
+  .footer {
+    padding: {
+      top: 34px;
+      bottom: 14px;
+    }
+    background-image: linear-gradient($color-main-darken 66.5%, $color-main-dark 66.5%);
+  }
+
+  .address {
+    justify-self: center;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+}

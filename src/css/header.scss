@@ -1,0 +1,183 @@
+@import 'variables';
+@import 'mixins';
+
+.header {
+  position: relative;
+  padding: 25px 0;
+  color: $color-main-lightest;
+  background-color: $color-main-darken;
+}
+
+.nav {
+  flex-basis: 61.5%;
+
+  &__list {
+    display: flex;
+    gap: $gap-sm 79px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    &_basic {
+      position: relative;
+      z-index: 0;
+      display: block;
+      line-height: 130%;
+      transition: color $duration $timing-function;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -5px;
+        bottom: 0;
+        left: -5px;
+        z-index: -1;
+        background-color: $color-accent-dark;
+        opacity: 0;
+        transition: opacity $duration $timing-function;
+      }
+
+      &:focus-visible {
+        outline: none;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &:hover:not(:focus-visible) {
+        color: $color-accent;
+      }
+
+      &:active:not(:focus-visible) {
+        color: $color-accent-darken;
+      }
+    }
+
+    &_phone {
+      display: none;
+    }
+  }
+}
+
+.search {
+  display: block;
+
+  &_open {
+    justify-self: flex-end;
+  }
+
+  &__icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    &_form {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &__path {
+    fill: $color-main-lightest;
+    transition: fill $duration $timing-function;
+  }
+
+  &:focus-visible {
+    @include outline-focus;
+  }
+
+  &:hover:not(:focus-visible) &__path {
+    fill: $color-accent;
+  }
+
+  &:active:not(:focus-visible) &__path {
+    fill: $color-accent-darken;
+  }
+}
+
+.search-form {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 16px;
+  border: 1px solid $color-main-dark;
+  background-color: $color-main-darken;
+  visibility: hidden;
+  transform: translateY(-185%);
+  transition: transform $duration $timing-function, visibility $duration $timing-function;
+
+  &_show {
+    visibility: visible;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    display: block;
+    padding: 5px 0 2px;
+    border: none {
+      radius: 0;
+      bottom: 1px solid $color-main-lighten;
+    }
+    width: 308px;
+    color: $color-main-lightest;
+    background-color: transparent;
+    transition: border-color $duration $timing-function;
+
+    &::placeholder {
+      font: {
+        family: 'TT Firs Neue', sans-serif;
+        weight: 400;
+      }
+      color: $color-main-lighten;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: $color-accent;
+    }
+
+    &:hover:not(:focus-visible) {
+      border-color: $color-accent;
+    }
+
+    &:active:not(:focus-visible) {
+      border-color: $color-accent-darken;
+    }
+
+    &.just-validate-error-field {
+      border-color: $color-danger;
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 18px;
+  }
+
+  &__rect {
+    fill: $color-main-lightest;
+    transition: fill $duration $timing-function;
+  }
+
+  &:focus-visible {
+    @include outline-focus;
+  }
+
+  &:hover:not(:focus-visible) &__rect {
+    fill: $color-accent;
+  }
+
+  &:active:not(:focus-visible) &__rect {
+    fill: $color-accent-dark;
+  }
+}

@@ -1,0 +1,59 @@
+@import 'variables';
+
+.map {
+  position: relative;
+  grid-column: span 8;
+  margin-top: 6px;
+  min-height: 460px;
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 89px 60px 60px;
+    width: 410px;
+    height: 100%;
+    color: $color-main-lightest;
+    background-color: rgba(32, 32, 32, 0.85);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s $timing-function 0s, opacity $duration $timing-function;
+
+    &_close {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s $timing-function $duration, opacity $duration $timing-function;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__address {
+    max-width: 357px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 92%;
+  }
+
+  &__location {
+    margin-bottom: 2px;
+    font-family: 'Roboto', sans-serif;
+    color: $color-main-light;
+    line-height: 175%;
+  }
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}

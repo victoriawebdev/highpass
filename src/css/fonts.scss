@@ -1,0 +1,7 @@
+@import 'mixins';
+
+@include font-face('Roboto', '../fonts/Roboto-Regular', 400);
+@include font-face('Roboto', '../fonts/Roboto-Bold', 700);
+@include font-face('TT Firs Neue', '../fonts/TTFirsNeue-Regular', 400);
+@include font-face('TT Firs Neue', '../fonts/TTFirsNeue-Medium', 500);
+@include font-face('TT Firs Neue', '../fonts/TTFirsNeue-Bold', 700);

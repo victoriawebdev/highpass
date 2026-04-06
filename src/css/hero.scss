@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'mixins';
+
+.hero {
+  padding-top: 41px;
+}
+
+.offer {
+  position: relative;
+  @include flex-column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 60px;
+  min-height: 422px;
+  color: $color-main-lightest;
+  @include background;
+  background-image: url('../img/raster/master-class-bg-1920.jpg');
+
+  &__mark {
+    top: 15px;
+    right: 15px;
+    padding: 8px 15px 6px;
+  }
+
+  &__title,
+  &__time {
+    font: {
+      weight: 700;
+      size: 36px;
+    }
+    line-height: 104%;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 3px;
+    font: {
+      family: 'Roboto', sans-serif;
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 1.2em;
+  }
+
+  &__time {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  &__link {
+    text-align: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
+}

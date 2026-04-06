@@ -1,0 +1,70 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  padding: 25px 0 15px;
+  color: $color-main-light;
+  background-color: $color-main-darken;
+}
+
+.copyright {
+  display: block;
+  font-size: 14px;
+  color: $color-main-lighten;
+
+  &__reg {
+    top: 0;
+    font-size: inherit;
+  }
+}
+
+.address {
+  @include flex-column;
+  justify-self: flex-end;
+  align-items: center;
+  gap: 8px;
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    line-height: 137.5%;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: $gap-sm;
+  max-width: 160px;
+
+  &__link,
+  &__icon {
+    display: block;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__path {
+    fill: $color-main-light;
+    transition: fill $duration $timing-function;
+  }
+
+  &__link {
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__link:focus-visible &__path {
+    fill: $color-accent-dark;
+  }
+
+  &__link:hover:not(:focus-visible) &__path {
+    fill: $color-accent;
+  }
+
+  &__link:active:not(:focus-visible) &__path {
+    fill: $color-accent-darken;
+  }
+}
